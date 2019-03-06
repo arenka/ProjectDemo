@@ -1,0 +1,17 @@
+﻿@model ProjectDemo.MvcWebUI.Models.UserDetailsViewModel
+
+<ul class="dropdown-menu">
+
+    @if (!String.IsNullOrEmpty(Model.UserName))
+    {
+        <li>
+        
+            <a asp-action="Details" asp-controller="User" asp-route-id="@Model.UserId">Welcome @Model.UserName</a>
+
+
+        </li>
+        <li>
+            <a asp-controller="Account" asp-action="LogOff">Log Off</a>
+        </li>
+    }
+</ul>
